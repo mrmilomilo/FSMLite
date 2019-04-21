@@ -32,7 +32,7 @@ void UFSMLiteComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	OnUpdateState.Broadcast(CurState);
+	OnTickState.Broadcast(CurState);
 }
 
 bool UFSMLiteComponent::InitFSMLite(int32 NumOfStates, uint8 InitialState)
@@ -74,7 +74,7 @@ bool UFSMLiteComponent::SetState(uint8 State)
 		return false;
 
 	if (IsInitialized) {
-		OnExitState.Broadcast(CurState);
+		OnEndState.Broadcast(CurState);
 	}
 
 	CurState = State;

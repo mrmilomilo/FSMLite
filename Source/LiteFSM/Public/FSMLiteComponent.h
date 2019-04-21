@@ -55,10 +55,10 @@ public:
 		FOnBeginState OnBeginState;
 
 	UPROPERTY(BlueprintAssignable, Category = "FSMLite")
-		FOnTickState OnUpdateState;
+		FOnTickState OnTickState;
 
 	UPROPERTY(BlueprintAssignable, Category = "FSMLite")
-		FOnEndState OnExitState;
+		FOnEndState OnEndState;
 
 
 	UPROPERTY(BlueprintReadWrite, Category = "FSMLite")
