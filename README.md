@@ -17,3 +17,6 @@
 ![Events](imgs/events.PNG)
 * Use SetState() to change state. Here there's just a delay before passing to next state. Transition conditions can be checked every tick using the **OnTickState** event.
 ![SetState](imgs/setstate.PNG)
+* Final result
+
+![Result](imgs/result.gif)
