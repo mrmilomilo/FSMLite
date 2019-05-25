@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "GameFramework/Actor.h"
+#include "Runtime/Engine/Classes/Engine/World.h"
 #include "FSMLiteComponent.generated.h"
 
 
@@ -36,6 +38,8 @@ private:
 	int32 NumOfStates;
 	uint8 CurState;
 
+	float CurStateBeginTime;
+
 	bool IsInitialized;
 
 public:
@@ -45,8 +49,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "FSMLite")
 	virtual bool SetState(uint8 State);
 
-	UFUNCTION(BlueprintCallable, Category = "FSMLite")
+	UFUNCTION(BlueprintPure, Category = "FSMLite")
 	bool IsValidState(uint8 State);
+
+	UFUNCTION(BlueprintPure, Category = "FSMLite")
+		uint8 GetCurrentState(uint8 State);
+
+	UFUNCTION(BlueprintPure, Category = "FSMLite")
+		float GetTime();
 
 
 

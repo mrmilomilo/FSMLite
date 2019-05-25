@@ -79,6 +79,8 @@ bool UFSMLiteComponent::SetState(uint8 State)
 
 	CurState = State;
 
+	CurStateBeginTime = GetOwner()->GetWorld()->GetTimeSeconds();	//save game time when cur state starts
+
 	OnBeginState.Broadcast(CurState);
 
 	return true;
@@ -91,5 +93,15 @@ bool UFSMLiteComponent::IsValidState(uint8 State)
 	}
 	
 	return false;
+}
+
+uint8 UFSMLiteComponent::GetCurrentState(uint8 State)
+{
+	return CurState;
+}
+
+float UFSMLiteComponent::GetTime()
+{
+	return (GetOwner()->GetWorld()->GetTimeSeconds() - CurStateBeginTime);
 }
 
