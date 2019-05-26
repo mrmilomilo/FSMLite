@@ -95,7 +95,7 @@ bool UFSMLiteComponent::IsValidState(uint8 State)
 	return false;
 }
 
-uint8 UFSMLiteComponent::GetCurrentState(uint8 State)
+uint8 UFSMLiteComponent::GetCurrentState()
 {
 	return CurState;
 }

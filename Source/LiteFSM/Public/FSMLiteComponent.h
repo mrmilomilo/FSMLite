@@ -53,7 +53,7 @@ public:
 	bool IsValidState(uint8 State);
 
 	UFUNCTION(BlueprintPure, Category = "FSMLite")
-		uint8 GetCurrentState(uint8 State);
+		uint8 GetCurrentState();
 
 	UFUNCTION(BlueprintPure, Category = "FSMLite")
 		float GetTime();
