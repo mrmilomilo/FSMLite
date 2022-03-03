@@ -44,7 +44,7 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable, Category="FSMLite")
-	virtual bool InitFSMLite(int32 NumOfStates, uint8 InitialState);
+	virtual bool InitFSMLite(int32 NumberOfStates, uint8 InitialState);
 
 	UFUNCTION(BlueprintCallable, Category = "FSMLite")
 	virtual bool SetState(uint8 State);
