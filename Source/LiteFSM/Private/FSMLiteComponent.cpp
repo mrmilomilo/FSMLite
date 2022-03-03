@@ -35,17 +35,17 @@ void UFSMLiteComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 	OnTickState.Broadcast(CurState);
 }
 
-bool UFSMLiteComponent::InitFSMLite(int32 NumOfStates, uint8 InitialState)
+bool UFSMLiteComponent::InitFSMLite(int32 NumberOfStates, uint8 InitialState)
 {
-	if (NumOfStates < 0 || NumOfStates > 255) {
+	if (NumberOfStates < 0 || NumberOfStates > 255) {
 		
 		if(bPrintErrorsToLog)
-			UE_LOG(LogTemp, Warning, TEXT("FSMLite.InitFSMLite(): invalid NumOfStates!"));
+			UE_LOG(LogTemp, Warning, TEXT("FSMLite.InitFSMLite(): invalid NumberOfStates!"));
 		
 		return false;
 	}
 	else {
-		this->NumOfStates = NumOfStates;
+		this->NumOfStates = NumberOfStates;
 	}
 
 
