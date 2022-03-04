@@ -1,10 +1,11 @@
 # FSMLite
 
-**FSMLite** is a plugin for UE4 that helps creating Finite State Machines. BP Enum based states. It is designed to be minimalistic and efficient. :rocket:
+**FSMLite** is a plugin for UE4/UE5 that helps creating Finite State Machines. BP Enum based states. It is designed to be minimalistic and efficient. :rocket:
 
 
 ## Installation
 * Copy into 'Plugins' folder in the project's root. Create one if needed.
+* For UE4 edit the LiteFSM.uplugin file and change "EngineVersion" to "4.x".
 
 ## Quick start
 * Create a BP enum. These values will be the states of the FSM.
