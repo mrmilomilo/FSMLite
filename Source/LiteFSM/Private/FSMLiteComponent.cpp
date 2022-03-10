@@ -41,13 +41,16 @@ bool UFSMLiteComponent::InitFSMLite(const int32 NumberOfStates, const uint8 Init
 
 
 	if (!IsValidState(InitialState)) {
-		if(bPrintErrorsToLog) UE_LOG(LogTemp, Warning, TEXT("FSMLite.InitFSMLite(): invalid InitialState!"));
+		if(bPrintErrorsToLog) 
+			UE_LOG(LogTemp, Warning, TEXT("FSMLite.InitFSMLite(): invalid InitialState!"));
+		
 		return false;
 	}
 	
 	SetState(InitialState);
 	IsInitialized = true;
 	SetComponentTickEnabled(true);
+
 	return true;
 }
 
@@ -69,7 +72,7 @@ bool UFSMLiteComponent::SetState(const uint8 State)
 bool UFSMLiteComponent::IsValidState(const uint8 State) const
 {
 	if (NumOfStates > 0) {
-		return (State < this->NumOfStates);
+		return (State >= 0 && State < this->NumOfStates);
 	}
 	
 	return false;
