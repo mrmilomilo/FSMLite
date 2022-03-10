@@ -3,7 +3,7 @@
 	"Version": 1,
 	"VersionName": "0.2",
 	"FriendlyName": "LiteFSM",
-	"Description": "Minimalistic and light FinisteStateMachine plugin",
+	"Description": "Minimalistic and light FiniteStateMachine plugin",
 	"Category": "FSMLite",
 	"CreatedBy": "mrmilomilo",
 	"CreatedByURL": "",
@@ -20,7 +20,6 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"WhitelistPlatforms": [
-				"Win32",
 				"Win64",
 				"Mac",
 				"Linux"
