@@ -8,11 +8,11 @@
 	"CreatedBy": "mrmilomilo",
 	"CreatedByURL": "",
 	"DocsURL": "https://github.com/mrmilomilo/FSMLite",
-	"MarketplaceURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/xxx",
 	"SupportURL": "",
 	"EngineVersion": "5.0",
 	"CanContainContent": false,
-	"IsBetaVersion": true,
+	"IsBetaVersion": false,
 	"Installed": true,
 	"Modules": [
 		{
@@ -23,7 +23,9 @@
 				"Win32",
 				"Win64",
 				"Mac",
-				"Linux"
+				"Linux",
+				"IOS",
+				"Android"
 			]
 		}
 	]
